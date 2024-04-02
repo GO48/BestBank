@@ -18,51 +18,23 @@
         </h1>
     </header>
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Payments</a>
-        <a href="#">Savings</a>
-        <a href="#">Laundering</a>
+        <a class="active" href="#home">Home</a>
+        <a href="#payments">Payments</a>
+        <a href="#savings">Savings</a>
+        <a href="#laundering">Laundering</a>
         <a href="http://www.savewalterwhite.com/" target="_blank">Donation</a>
     </nav>
     <main>
         <section class="buttons-container">
-            <button id="pay-btn">Pay</button>
-            <button id="transfer-btn">Transfer</button>
+            <button>Pay</button>
+            <button>Transfer</button>
         </section>
         <div class="flexbox-row">
-            <section class="in-one-row in-two-rows">
+            <section class="data-section in-one-row" id="accounts">
                 <h2>Accounts</h2>
-                <div class="account">
-                    <p>Main Account</p>
-                    <p id="main-account">$ 0</p>
-                </div>
-                <div class="account">
-                    <p>Expenses</p>
-                    <p id="expenses">$ 0</p>
-                </div>
-                <div class="account">
-                    <p>Savings</p>
-                    <p id="savings">$ 0</p>
-                </div>
             </section>
-            <section class="hidden in-two-rows">
+            <section class="data-section hidden" id="spendings">
                 <h2>Spendings</h2>
-                <div class="spending" style="width: 90%;">
-                    <p>Rent</p>
-                    <p>$ 1,450</p>
-                </div>
-                <div class="spending"style="width: 60%;">
-                    <p>Groceries</p>
-                    <p>$ 564</p>
-                </div>
-                <div class="spending" style="width: 50%;"">
-                    <p>Restaurants</p>
-                    <p>$ 123</p>
-                </div>
-                <div class="spending" style="width: 50%;"">
-                    <p>Tranport</p>
-                    <p>$ 81</p>
-                </div>
             </section>
         </div>
     </main>

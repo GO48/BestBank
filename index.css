@@ -1,13 +1,10 @@
-/*
-COLOR PALETTE
-header-bg, main-fg: #3D3D3D
-header-fg, main-bg: #F0F0F0
-Breaking Bad Green: #00892B
-Golden Moth Yellow: #FEDD00 #D5C262
---pear: #b7da23ff;
---mindaro: #d5e976ff;
---dark-moss-green: #637126ff;
-*/
+/* COLOR PALETTE */
+:root {
+    --color-dark: #3D3D3D; /* header-bg, main-fg */
+    --color-light: #F0F0F0; /* header-fg, main-bg */
+    --color-theme-green: #00892B; /* Breaking Bad Green */
+    --color-theme-yellow: #FEDD00; /* Golden Moth Yellow */
+}
 
 * {
     box-sizing: border-box;
@@ -20,25 +17,26 @@ body {
     padding: 0;
     touch-action: manipulation;
     font-family: 'Inter', sans-serif;
-    background-color: #F0F0F0;
-    color: #3D3D3D;
+    color: var(--color-dark);
+    background-color: var(--color-light);
 }
 
+/* header */
 header {
-    background-color: #3D3D3D;
-    padding: .5rem;
+    background-color: var(--color-dark);
+    text-align: center;
+    padding: .25rem;
 }
 
 h1 {
-    color: #00892B;
-    text-align: center;
+    color: var(--color-theme-green);
 }
 
 h1 span {
-    background-color: #00892B;
-    color: #F0F0F0;
-    padding: .2rem;
-    border: #F0F0F0 .1rem solid;
+    background-color: var(--color-theme-green);
+    color: var(--color-light);
+    padding: .25rem;
+    border: var(--color-light) .1rem solid;
 }
 
 h1 sup {
@@ -47,38 +45,51 @@ h1 sup {
     margin-left: -0.4rem;
 }
 
+/* nav */
 nav {
-    background-color: #00892B;
+    background-color: var(--color-theme-green);
     text-align: center;
-    padding: .8rem;
+    padding: .5rem;
     line-height: 2;
 }
 
 nav a:link,
-nav a:visited{
-    color: #F0F0F0;
-    padding: .3rem .5rem;
-    margin: 0 1rem;
+nav a:visited {
+    color: var(--color-light);
     text-decoration: none;
+    padding: .5rem;
+    margin: 0 2rem;
 }
 
 nav a:hover {
     /* text-decoration: underline; */
     font-size: large;
     font-weight: bolder;
-    border: #F0F0F0 .2rem solid;
+    border: var(--color-light) .2rem solid;
 }
 
+nav a.active {
+    font-size: large;
+    font-weight: bolder;
+}
+
+/* main */
 main {
-    max-width: 50rem;
     margin: 0 auto;
+    max-width: 60rem;
     padding: 1rem;
     /* border: red 2px solid; */
 }
 
+/* sections display */
 .flexbox-row {
     display: flex;
     flex-direction: row;
+}
+
+.data-section {
+    width: 50%;
+    padding: 0 1rem;
 }
 
 .in-one-row {
@@ -90,39 +101,36 @@ main {
     display: none;
 }
 
-.in-two-rows {
-    display: block;
-    width: 50%;
-    padding: 0 1rem;
-}
-
+/* buttons */
 .buttons-container {
     text-align: center;
 }
 
 .buttons-container button {
     background-color: white;
-    color: #3D3D3D;
+    color: var(--color-dark);
     font-size: large;
     font-weight: bold;
     padding:.5rem;
-    border: #00892B .2rem solid;
+    border: var(--color-theme-green) .2rem solid;
     border-radius: 2rem;
-    margin: 0 1rem;
-    width: 30%;
+    margin: .5rem 1rem;
+    width: 10rem;
     cursor: pointer;
 }
 
 .buttons-container button:hover {
-    background-color: #00892B;
-    color: #F0F0F0;
+    background-color: var(--color-theme-green);
+    color: var(--color-light);
 }
 
+/* accounts */
 .account {
     background-color: white;
     font-weight: bold;
     padding: .5rem 1rem;
-    border: #00892B .2rem solid;
+    line-height: 1.5;
+    border: var(--color-theme-green) .2rem solid;
     border-radius: .5rem;
     margin: 1rem auto;
     display: flex;
@@ -131,14 +139,15 @@ main {
     overflow: auto;
 }
 
-.account:hover {
-    background-color: #FEDD00;
+.account:hover,
+.account.active {
+    background-color: var(--color-theme-yellow);
     font-size: larger;
     font-weight: bolder;
 }
 
 .spending {
-    background-color: #FEDD00;
+    background-color: var(--color-theme-yellow);
     font-size: small;
     font-weight: bold;
     padding: .5rem .75rem;
@@ -149,11 +158,11 @@ main {
 }
 
 .spending p {
-    padding: 0;
     margin: 0;
 }
 
 .spending:hover {
-    font-size: medium;
-    border: #00892B .2rem solid;
+    border: var(--color-theme-green) .2rem solid;
+    font-size: larger;
+    font-weight: bolder;
 }
