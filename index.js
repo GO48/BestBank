@@ -32,22 +32,15 @@ function renderAccounts() {
     })
 }
 
-
 function clearActive(parentEl) {
-    for (const child of parentEl.children) {
-        if (child.classList.contains("active")){
-            child.classList.remove("active")
-        }
+    for (let child of parentEl.children) {
+        child.classList.remove("active")
     }
 }
 
 function changeView() {
-    if (accountsEl.classList.contains("in-one-row")) {
-        accountsEl.classList.remove("in-one-row")
-    } 
-    if(spendingsEl.classList.contains("hidden")) {
-        spendingsEl.classList.remove("hidden")
-    }
+    accountsEl.classList.toggle("in-one-row")
+    spendingsEl.classList.toggle("hidden")    
 }
 
 function renderSpendings(id) {
